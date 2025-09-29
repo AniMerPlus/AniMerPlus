@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--batch_size', type=int, default=1, help='Batch size for inference/fitting')
     parser.add_argument('--file_type', nargs='+', default=['*.jpg', '*.png', '*JPEG'],
                         help='List of file extensions to consider')
-    parser.add_argument('--animal_type', type=str, choices=["mammal, bird"], default="bird",
+    parser.add_argument('--animal_type', type=str, choices=["mammal", "bird"], default="bird",
                         help='Type of animal to render (mammal or bird)')
 
     args = parser.parse_args()

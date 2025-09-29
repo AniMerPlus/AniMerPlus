@@ -7,7 +7,7 @@ from .animerpp import AniMerPlusPlus
 def load_amr(checkpoint_path):
     from pathlib import Path
     from ..configs import get_config
-    model_cfg = str(Path(checkpoint_path).parent / 'config.yaml')
+    model_cfg = str(Path(checkpoint_path).parent.parent / '.hydra' / 'config.yaml')
     model_cfg = get_config(model_cfg, update_cachedir=True)
 
     # Override some config values, to crop bbox correctly

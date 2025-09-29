@@ -12,6 +12,7 @@ pip install -e .[all]
 # install pytorch3d
 pip install "git+https://github.com/facebookresearch/pytorch3d.git"
 ```
+Our code is tested under Ubuntu. If you want to set up an environment on WSL Ubuntu, you can refer to this [fork](https://github.com/AniMerPlus/AniMerPlus/compare/master...ict302it12:AniMerPlus:master).
 
 ## Gradio demo
 Downloading the checkpoint folder named AniMerPlus from [here](https://drive.google.com/drive/folders/146ic3vnlgqutY3lh6BdV7ZXt9Ox2VAfh?usp=sharing) to `data/`. Then you can try our model by:
