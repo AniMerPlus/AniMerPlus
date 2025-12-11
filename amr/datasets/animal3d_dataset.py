@@ -55,7 +55,7 @@ class Train3DDataset(Dataset):
         bbox = data['bbox']  # [x, y, w, h]
         center = np.array([(bbox[0] * 2 + bbox[2]) // 2, (bbox[1] * 2 + bbox[3]) // 2])
         pose = np.array(data['pose'], dtype=np.float32)  # [105, ]
-        betas = np.array(data['shape'] + data['shape_extra'], dtype=np.float32)  # [41, ]
+        betas = np.array(data['shape'], dtype=np.float32)  # [41, ]
         translation = np.array(data['trans'], dtype=np.float32)  # [3, ]
         has_pose = np.array(1., dtype=np.float32)
         has_betas = np.array(1., dtype=np.float32)
@@ -68,7 +68,7 @@ class Train3DDataset(Dataset):
                        'pose': pose[3:],
                        'betas': betas,
                        'transl': translation,
-                       'bone': np.zeros(24, dtype=np.float32) if 'bone' not in data else data['bone']
+                       'bone': np.zeros(24, dtype=np.float32) if 'bone' not in data else np.array(data['bone'], dtype=np.float32)
                        }
         has_smal_params = {'global_orient': has_pose,
                            'pose': has_pose,
