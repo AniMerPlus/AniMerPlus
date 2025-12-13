@@ -22,6 +22,7 @@ setup(
         'xtcocotools',
         'pandas',
         'open3d',
+        'gradio==5.9.0',
     ],
     extras_require={
         'all': [
