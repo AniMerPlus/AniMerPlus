@@ -25,9 +25,6 @@ If you do not want to use gradio app, you can use the following command:
 ```bash
 python demo.py --checkpoint data/AniMerPlus/checkpoints/checkpoint.ckpt --img_folder path/to/imgdir/
 ```
-If you want to reproduce the results in the paper, please switch to the paper branch. 
-The reason for this is that we found that the 3D keypoints of the Animal3D dataset may have been exported incorrectly, 
-so the version released now is the result of retraining after we fixed it.
 
 ## Training
 Downloading the pretrained backbone and Our dataset from [here](https://drive.google.com/drive/folders/146ic3vnlgqutY3lh6BdV7ZXt9Ox2VAfh?usp=sharing). Then, processing the data format to be consistent with Animal3D and replacing the training data path in the configs_hydra/experiment/AniMerPlus.yaml file. 
